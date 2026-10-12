@@ -7339,7 +7339,7 @@ void Simulator::DecodeRvvIVI() {
       RVV_VI_GENERAL_LOOP_BASE
 
       reg_t offset = 0;
-      bool is_valid = (i + sh) < rvv_vlmax();
+      bool is_valid = (i + sh) < rvv_vl();
 
       if (is_valid) {
         offset = sh;
@@ -7611,7 +7611,7 @@ void Simulator::DecodeRvvIVX() {
       RVV_VI_GENERAL_LOOP_BASE
 
       reg_t offset = 0;
-      bool is_valid = (i + sh) < rvv_vlmax();
+      bool is_valid = (i + sh) < rvv_vl();
 
       if (is_valid) {
         offset = sh;
