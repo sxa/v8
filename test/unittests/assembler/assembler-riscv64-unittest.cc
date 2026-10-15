@@ -52,7 +52,7 @@ using AssemblerRISCV64Test = TestWithIsolate;
 
 // RVV assembler tests were written for at most 512-bit vectors (64 x i8 lanes).
 // Hardware may report VLEN > 512; cap AVL and assertions to this width.
-constexpr int kRvvUnitTestMaxBits = 1024;
+constexpr int kRvvUnitTestMaxBits = 512;
 static_assert(kMaxRvvVLEN >= kRvvUnitTestMaxBits, "Unsupported VLEN");
 constexpr int kMaxElements = kMaxRvvVLEN / 8;
 
